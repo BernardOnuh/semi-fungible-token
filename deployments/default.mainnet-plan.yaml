@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://stacks-node-api.mainnet.stacks.co"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: semi-fungible-token
+            expected-sender: SP2235JGFJAP4YCGWQCTMRY6HY79QJXBQ2FK2Z5BW
+            cost: 50400
+            path: contracts/semi-fungible-token.clar
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "3.3"
